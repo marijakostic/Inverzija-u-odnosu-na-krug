@@ -1,0 +1,272 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[top=15mm,left=20mm,]{geometry}
+
+\usepackage[serbian]{babel}
+\usepackage{amssymb,amsmath,amsthm}
+
+
+\newtheorem{teorema}{{Teorema}}[section]
+\newtheorem{stav}{{Stav}}[section]
+\newtheorem{posledica}{Posledica}
+\theoremstyle{definition}
+\newtheorem{definicija}{{Definicija}}
+
+
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{tikz}
+
+\newcommand{\RomanNumeralCaps}[1]
+    {\MakeUppercase{\romannumeral #1}}
+
+\title{\bf Inverzija u odnosu na krug}
+\author{Marija Kosti\'{c}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Definicija i konstrukcija inverzne ta\v{c}ke}
+
+Neka je $O$ fiksirana ta\v{c}ka u ravni $E^2$ i neka je $r>0$ fiksiran pozitivan realan broj. Neka je $k=k(O,r)$ krug sa centrom u $O$ polupre\v{c}nika $r$.
+
+\begin{definicija}
+\label{def:inverzija}
+Neka je $k(O,r)$ proizvoljan krug ravni $E^2$. {\it Inverzija u odnosu n krug} $k$ je preslikavnje $$\psi_k : E^2 \setminus \{O\}\longrightarrow E^2 \setminus \{O\},$$ koje svakoj ta\v{c}ki $P \in E^2 \setminus \{O\}$(Slika \ref{slk:inverzija}) dodeljuje ta\v{c}ku $\psi_k (P)=P'$ na polupravoj $OP$ sa po\v{c}etkom u $O$ takvu da je
+\begin{equation}
+     \overrightarrow{OP} \cdot \overrightarrow{OP'}=r^2.
+     \label{eq:1}
+\end{equation}
+\end{definicija}
+
+\begin{figure}[h]
+   \begin{center}
+       \input{inverzija1def.tkz}
+   \end{center}
+    \caption{Inverzija u odnosu na krug}
+    \label{slk:inverzija}
+\end{figure}
+
+
+Ta\v{c}ku $O$ nazivamo {\it centrom} ili {\it sredi\v{s}tem inverzije},du\v{z} $r$ nazivamo {\it polupre\v{c}nikom}, veli\v{c}inu $r^2$ nazivamo {\it steprenom}, a krug $k$ nazivamo {\it krugom inverzije} $\psi_k$.\\
+
+Iz Definicije \ref{def:inverzija} neposredno sledi da je inverzija u odnosu na krug $k\subset E^2$ bijektivna transformacija. To nije transformacija cele ravni $E^2$ ve\'{c} samo njenog dela $E^2 \setminus \{O\}$, jer u njoj nije definisana slika ta\v{c}ke $O$, niti je ta\v{c}ka $O$ slika neke ta\v{c}ke ravni $E^2$.
+
+\begin{teorema}
+Inverzija u odnosu na krug je involuciona transformacija.
+\end{teorema}
+\begin{proof}
+Neka je $\psi_k : E^2 \setminus \{O\}\longrightarrow E^2 \setminus \{O\}$ inverzija u odnosu na krug $k(O,r)$. Ako je $P \in  E^2 \setminus \{O\}$ bi\'{c}e $P'=\psi_k(P)$ ta\v{c}ka poluprave $OP$ takva da je $OP \cdot OP'=r^2$. Stoga je i ta\v{c}ka $P$ na polupravoj $OP'$ takva da je $OP' \cdot OP=r^2$, pa je $\psi_k(P')=P$.
+\end{proof}
+
+\begin{teorema}
+\label{th:fiksnatacka}
+U inverziji $\psi_k : E^2 \setminus \{O\}\longrightarrow E^2 \setminus \{O\}$ ta\v{c}ka $X$ je fiksna ta\v{c}ka preslikavanja ako i samo ako je $X \in k$.
+\end{teorema}
+
+\begin{proof}
+Ako je ta\v{c}ka $X \in E^2 \setminus \{O\}$ fiksna ta\v{c}ka, imamo da je $OX \cdot OX=r^2$, pa je $OX=r$, pa prema tome $X \in k$. Obrnuto, ako je $X \in k$, ta\v{c}ka $X'=\psi_k(X)$ \'{c}e biti na polupravoj $OX$ tako da va\v{z}i $OX \cdot OX'=r^2$, $OX=r$ pa prema tome $X=X'$.
+\end{proof}
+
+\begin{teorema}
+\label{th:slikatacke}
+U inverziji $\psi_k : E^2 \setminus \{O\}\longrightarrow E^2 \setminus \{O\}$ ta\v{c}ki $X$ koja se nalazi u unutra\v{s}njosti kruga $k$ odgovara ta\v{c}ka $X'$ koja se nalazi izvan kruga $k$. Obrnuto, ta\v{c}ki $X$ koja se nalazi van kruga $k$ odgovara ta\v{c}ka $X'$ koja se nalazi unutar kruga $k$.
+\end{teorema}
+
+\begin{proof}
+Neka je $O$ sredi\v{s}te, a $r$ polupre\v{c}nik kruga $k$. AKo je ta\v{c}ka $X$ u unutra\v{s}njosti kruga $k$, tada je $OX<r$, pa iz relacije (\ref{eq:1}) $OX\cdot OX'=r^2$ sledi da je $OX'>r$, pa je ta\v{c}ka $X'$ izvan kruga. Obrnuto, ako je ta\v{c}ka $X$ izvan kruga $k$, tada je $OX>r$, pa iz relacije (\ref{eq:1}) $OX\cdot OX'=r^2$ sledi da je $OX'<r$, pa je ta\v{c}ka $X'$ u unutra\v{s}njosti kruga.
+\end{proof}
+
+\subsection*{Konstrukcija inverzne ta\v{c}ke}
+
+Neka je $k=k(O,r)$ fiksiran krug sa centrom u ta\v{c}ki $O$ polupre\v{c}nika $r$ i neka je data ta\v{c}ka $P$ van kruga $k$.Neka su $t_1$ i $t_2$ tangente iz ta\v{c}ke $P$ na krug $k$, a $T_1$ i $T_2$ na $t_1$ i $t_2$ redom, ta\v{c}ke dodira ovih tangenti sa krugom $k$. Neka je $P'$ prese\v{c}na ta\v{c}ka prave $T_1T_2$ i prave $OP$(Slika \ref{slk:konstrukcijauopsteno}).
+
+\begin{figure}[h]
+   \begin{center}
+       \input{inverzija_dokaz.tkz}
+   \end{center}
+    \caption{Konstrukcija inverzne ta\v{c}ke}
+    \label{slk:konstrukcijauopsteno}
+    \vspace{40pt}
+\end{figure}
+
+\begin{stav}
+\label{st:normala}
+Prava $T_1T_2$ je normalna na pravu $OP$.
+\end{stav}
+
+\begin{proof}
+Kako je $OT_1=OT_2=r$ i $PT_1=PT_2$ kao tangentne du\v{z}i, to ta\v{c}ke $P$ i $O$ le\v{z}e na simetrali du\v{z}i $T_1T_2$, odnosno prava $PO$ je normalna na pravu $T_1T_2$ kao simetrala du\v{z}i $T_1T_2$. 
+\end{proof}
+
+\begin{stav}
+\label{st:slicnost}
+Trouglovi $OT_1P$ i $OP'T_1$ su sli\v{c}ni.
+\end{stav}
+
+\begin{proof}
+Iz Stava \ref{st:normala} $\bigtriangleup OT_1P$ i $\bigtriangleup OP'T_1$ su pravougli sa jednim zajedni\v{c}kim uglom kod temena $O$, pa je $\bigtriangleup OT_1P \cong\bigtriangleup OP'T_1$.
+\end{proof}
+
+\begin{posledica}
+Ta\v{c}ka $P'$ je slika ta\v{c}ke $P$ pri inverziji u odnosu na krug $k$.
+\end{posledica}
+
+\begin{proof}
+Iz sli\v{c}nosti koju smo dokazali u Stavku \ref{st:slicnost}, dobijamo $OT_1:OP'=OP:OT_1$. Odavde je $OP \cdot OP'=OT_1^2=r^2$.
+\end{proof}
+
+Prethodno razmatranje je zapravo analiza i dokaz geometrijskog na\v{c}ina da konstrui\v{s}emo sliku date ta\v{c}ke pri inverziji.
+U nastavku \'{c}emo opisati konstrukciju.\\
+
+Iz Teoreme (\ref{th:fiksnatacka}) sledi da se ta\v{c}ka koja pripada krugu inverzije slika u sebe tj. fiksna je, pa iz Teoreme (\ref{th:slikatacke}) razlikujemo dva slu\v{c}aja: kada je ta\v{c}ka koju preslikavamo unutar kruga i kada je ta\v{c}ka koju preslikavamo izvan kruga.
+
+\subsubsection*{Konstukcija inverzne ta\v{c}ke za ta\v{c}ku unutar kruga}
+
+Neka je $k=k(O,r)$ krug sa centrom u ta\v{c}ki $O$ polupre\v{c}nika $r$ i neka je $P$ ta\v{c}ka unutar kruga $k$.Konstrukcija inverzne ta\v{c}ke $P'$ se sastoji iz slede\'{c}ih koraka:
+\begin{itemize}
+    \item Konstrui\v{s}emo pravu $p$ koja sadr\v{z}i ta\v{c}ke $O$ i $P$;
+    \item Konstrui\v{s}emo normalu $n$ iz ta\v{c}ke $P$ na pravu $p$;
+    \item Neka je $T$ jedna od ta\v{c}aka preseka kruga $k$ i prave $n$;
+    \item Konstrui\v{s}emo polupre\v{c}nik $OT$;
+    \item Konstrui\v{s}emo tangentu $t$ kruga $k$ iz ta\v{c}ke $T$ normalno na polupre\v{c}nik $OT$;
+    \item Ta\v{c}ka $P'$ \'{c}e biti presek pravih $p$ i $t$; 
+
+\end{itemize}
+Konstrukcija je data na Slici \ref{slk:konstrukcija} u delu (\ref{slk:unutar}).
+
+\subsubsection*{Konstukcija inverzne ta\v{c}ke za ta\v{c}ku izvan kruga}
+
+Neka je $k=k(O,r)$ krug sa centrom u ta\v{c}ki $O$ polupre\v{c}nika $r$ i neka je $P$ ta\v{c}ka van kruga $k$.Konstrukcija inverzne ta\v{c}ke $P'$ se sastoji iz slede\'{c}ih koraka:
+\begin{itemize}
+    \item Konstrui\v{s}emo du\v{z} $OP$;
+    \item Konstrui\v{s}emo krug $k_1$ nad pre\v{c}nikom $OP$;
+    \item Neka su $T_1$ i $T_2$ prese\v{c}ne ta\v{c}ke krugova $k$ i $k_1$;
+    \item Ta\v{c}ka $P'$ \'{c}e biti presek du\v{z}i $OP$ i $T_1T_2$; 
+\end{itemize}
+Konstrukcija je data na Slici \ref{slk:konstrukcija} u delu (\ref{slk:van}).\\
+
+\begin{figure}[h!]
+	\begin{subfigure}{80mm}
+		\input{inverzija2.tkz}
+		\subcaption{Ta\v{c}ka $P$ je unutar kruga $k$}
+		\label{slk:unutar}
+	\end{subfigure}
+		%%%%%%%%%%%%%%
+	\begin{subfigure}{80mm}
+		\input{inverzija3.tkz}
+		\subcaption{Ta\v{c}ka $P$ je van kruga $k$}
+		\label{slk:van}
+	\end{subfigure}
+\caption{Konstrukcija slike ta\v{c}ke $P$ pri inverziji u odnosu na krug $k$}
+\label{slk:konstrukcija}
+\end{figure}
+
+\newpage		
+\section{Slika prave i kruga pri inverziji}
+
+U ovom delu \'{c}emo videti da slika prave u inverziji mo\v{z}e biti prava ili krug, kao i da isto va\v{z}i i za krug.\\
+
+Slede\'{c}e teoreme navodimo bez dokaza.\\
+
+Neka je $k=k(O,r)$ krug sa centrom u ta\v{c}ki $O$ polupre\v{c}nika $r$.\\
+
+\begin{teorema}
+Prava $p$ koja sadr\v{z}i centar $O$ inverzije $\psi_k$ slika se u sebe samu(Slika \ref{slk:1}).
+\end{teorema}
+
+\begin{figure}[h!]
+   \begin{center}
+       \input{1.tkz}
+   \end{center}
+    \caption{}
+    \label{slk:1}
+\end{figure}
+
+\begin{teorema}
+\label{th:krugprava}
+Prava $p$ koja ne sadr\v{z}i centar $O$ inverzije $\psi_k$ slika se u krug koji prolazi kroz centar inverzije $O$.
+\end{teorema}
+
+Razlikova\'{c}emo dva slu\v{c}aja, videtili Sliku \ref{slk:krugprava}.
+
+\begin{figure}[h!]
+	\begin{subfigure}{80mm}
+		\input{2.2.tkz}
+		\subcaption{Prava se\v{c}e krug inverzije}
+		\label{slk:sece}
+	\end{subfigure}
+		%%%%%%%%%%%%%%
+	\begin{subfigure}{80mm}
+		\input{2.1.tkz}
+		\subcaption{Prava ne se\v{c}e krug inverzije}
+		\label{slk:ne_sece}
+	\end{subfigure}
+\caption{}
+\label{slk:krugprava}
+\end{figure}
+
+\begin{teorema}
+Krug $k_1$ koji sadr\v{z}i centar $O$ inverzije $\psi_k$ slika se u pravu koja ne prolazi kroz centar inverzije $O$.
+\end{teorema}
+Slika je ista kao u prethodnoj Teoremi \ref{th:krugprava}(Slika \ref{slk:krugprava}).
+
+\begin{teorema}
+\label{th:krugkrug}
+Krug $k_1$ koji ne sadr\v{z}i centar $O$ inverzije $\psi_k$ slika se u krug koji ne prolazi kroz centar inverzije $O$.
+\end{teorema}
+Razlikova\'{c}emo dva slu\v{c}aja, videtili Sliku \ref{slk:2}.
+
+\begin{figure}[h!]
+	\begin{subfigure}{85mm}
+		\input{4.2.tkz}
+		\subcaption{Krugovi se seku}
+		\label{slk:seku}
+	\end{subfigure}
+		%%%%%%%%%%%%%%
+	\begin{subfigure}{85mm}
+		\input{4.1.tkz}
+		\subcaption{Krugovi se ne seku}
+		\label{slk:ne_seku}
+	\end{subfigure}
+\caption{}
+\label{sl:krugprava}
+\label{slk:2}
+\end{figure}
+
+Centar kruga se pri inverziji ne slika u centar odgovaraju\'{c}eg kruga. Ipak, va\v{z}i da prava koja prolazi kroz centar kruga i njegovu sliku pri inverziji, prolazi kroz centar te inverzije, \v{s}to direktno sledi iz Teoreme \ref{th:krugkrug}.
+
+\begin{teorema}
+Krug $k_1$ koji je ortogonalan na krug inverzije $k$ slika se u samog sebe pri inverziji $\psi_k$.
+\end{teorema}
+
+\begin{figure}[h!]
+   \begin{center}
+       \input{5.tkz}
+   \end{center}
+    \caption{}
+    \label{slk:1}
+\end{figure}
+
+\newpage
+
+\begin{thebibliography}{9}
+\bibitem{lopandic} 
+Dragomir Lopandi\'{c}.
+\textit{Geometrija za \RomanNumeralCaps{3} razred usmerenog obrazovanja}. 
+Nau\v{c}na knjiga, 1980.
+
+\bibitem{lucic} 
+Zoran Lu\v{c}i\'{c}. 
+\textit{Euklidska i hiperboli\v{c}ka geometrija}.
+Total Design i Matemati\v{c}ki fakultet Beograd, 1997.
+
+\end{thebibliography}
+
+\end{document}

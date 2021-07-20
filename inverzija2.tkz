@@ -1,0 +1,59 @@
+\begin{tikzpicture}[scale=0.75]
+\clip (0,0) rectangle (14.000000,10.000000);
+{\footnotesize
+
+% Drawing circle k
+\draw [line width=0.016cm] (7.220360,4.800000) arc (0:59:2.220360 and 2.220360) -- (6.134566,6.708601);%
+\draw [line width=0.016cm] (6.065077,6.748233) -- (6.042396,6.760462) arc (62:360:2.220360 and 2.220360);%
+
+% Marking point O by circle
+\draw [line width=0.016cm] (5.000000,4.800000) circle (0.040000);%
+\draw (5.030000,4.830000) node [anchor=north east] { $O$ };%
+
+% Marking point P by circle
+\draw [line width=0.016cm] (6.100000,4.800000) circle (0.040000);%
+\draw (6.130000,4.830000) node [anchor=north east] { $P$ };%
+
+% Drawing line p
+\draw [line width=0.016cm] (1.500000,4.800000) -- (4.960000,4.800000);%
+\draw [line width=0.016cm] (5.040000,4.800000) -- (6.060000,4.800000);%
+\draw [line width=0.016cm] (6.140000,4.800000) -- (9.441818,4.800000);%
+\draw [line width=0.016cm] (9.521818,4.800000) -- (12.000000,4.800000);%
+
+% Printing text at point M
+\draw (1.670000,4.830000) node [anchor=north west] { $p$ };%
+
+% Drawing line n
+\draw [line width=0.016cm] (6.100000,1.000000) -- (6.100000,4.760000);%
+\draw [line width=0.016cm] (6.100000,4.840000) -- (6.100000,6.688730);%
+\draw [line width=0.016cm] (6.100000,6.768730) -- (6.100000,9.000000);%
+
+% Printing text at point K
+\draw (6.070000,1.530000) node [anchor=north west] { $n$ };%
+
+% Marking point T by circle
+\draw [line width=0.016cm] (6.100000,6.728730) circle (0.040000);%
+\draw (6.070000,6.698730) node [anchor=south west] { $T$ };%
+
+% Drawing segment O T
+\draw [line width=0.016cm] (5.019817,4.834746) -- (6.080183,6.693984);%
+
+% Marking point r
+\draw (5.550000,5.764365) node [anchor=south east] { $r$ };%
+
+% Drawing line t
+\draw [line width=0.016cm] (2.117576,9.000000) -- (6.065254,6.748547);%
+\draw [line width=0.016cm] (6.134746,6.708914) -- (9.447072,4.819817);%
+\draw [line width=0.016cm] (9.516564,4.780183) -- (12.000000,3.363822);%
+
+% Printing text at point H
+\draw (2.270000,8.730000) node [anchor=north west] { $t$ };%
+
+% Marking point P' by circle
+\draw [line width=0.016cm] (9.481818,4.800000) circle (0.040000);%
+\draw (9.511818,4.830000) node [anchor=north east] { $P'$ };%
+
+% Marking point k
+\draw (3.121866,5.984319) node [anchor=south east] { $k$ };%
+}
+\end{tikzpicture}

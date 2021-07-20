@@ -1,0 +1,45 @@
+dim 140 100
+area 15 10 120 90
+point O 50 48 % centar kruga
+point X 47 70 % pomocna tacka sa kruga
+
+circle k O X
+drawcircle k
+cmark_lb O
+
+% preslkavamo ovu tacku
+point P 61 48
+cmark_lb P
+
+line p O P % prava p=OP
+drawline p
+
+point M 17 48 % oznaka za pravu
+printat_rb M {p}
+
+perp n P p % normala iz P na p
+drawline n
+
+point K 61 15 % oznaka za normalu
+printat_rb K {n}
+
+intersec2 T T_1 n k % presesk n i k su dve tacke
+cmark_rt T % treba nam jedna npr T
+
+line t_1 O T
+drawsegment O T
+towards r O T 0.5
+mark_lt r
+
+perp t T t_1 % normala iz T na t1
+drawline t
+
+point H 23 87
+printat_rb H {t}
+
+intersec P' p t % presek pravih p i t
+cmark_lb P'
+
+rotate k O -310 X % oznaka za k
+mark_lt k
+

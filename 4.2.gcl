@@ -1,0 +1,56 @@
+dim 140 100
+area 10 10 130 90
+point O 44 39
+point P 21 55
+circle k O P
+drawcircle k
+cmark_lb O
+
+point A 57 49
+%cmark_lt A
+point B 77 50
+%cmark_rt B
+point C 79 32
+%cmark_rb C
+
+med a A B
+med b A C
+intersec O_1 a b
+color 0 0 255
+cmark_b O_1
+color 255 0 0 
+circle k_1 O_1 A
+drawcircle k_1
+
+color 0 0 0
+
+sim O_1' k O_1
+color 0 0 255
+cmark_b O_1'
+color 0 0 0
+sim A' k A
+sim B' k B
+sim C' k C
+%cmark_lt A'
+%cmark_lb B'
+%cmark_l C'
+
+med a A' B'
+med b A' C'
+intersec O_2 a b
+circle k_1' O_2 A'
+cmark_b O_2
+color 255 0 0
+drawcircle k_1'
+color 0 0 0
+
+
+rotate k O -310 P % oznaka za k
+mark_lt k
+rotate k_1 O_1 -150 A
+mark_rt k_1
+rotate k_1' O_2 -420 A'
+mark_rt k_1'
+
+
+

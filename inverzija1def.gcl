@@ -1,0 +1,32 @@
+dim 130 75
+
+point O 58 41 
+point X 61 64 % pomocna tacka
+
+circle k O X
+drawcircle k
+cmark_lb O
+
+point P 70 41 % preslkavamo ovu tacku
+cmark_lb P
+
+line p O P
+perp n P p
+intersec2 T T_1 n k
+
+cmark_rt T
+
+line t O T
+perp t_1 T t
+intersec P' p t_1
+
+cmark_rb P'
+
+drawsegment O P'
+drawsegment O T
+drawsegment T P'
+drawsegment T P
+
+rotate k O -150 X
+mark_rb k
+

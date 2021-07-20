@@ -1,0 +1,43 @@
+dim 140 100
+area 15 10 120 90
+point O 46 42 % centar kruga
+point P 40 71 % pomocna tacka sa kruga
+
+circle k O P
+drawcircle k
+cmark_lb O
+
+point A 42 76
+%cmark_rt A
+point B 89 21
+%cmark_rt B
+
+color 255 0 0
+line p A B
+drawline p
+
+color 0 0 0
+point M 35 87 % oznaka za pravu
+printat_rb M {p}
+
+online C A B
+online D A B
+sim C' k C % tacka simerticna A u odnosu na k
+%cmark_lb A'
+sim D' k D
+%cmark_lb B'
+
+med a C' D' %simetrala stranice
+med b C' O
+intersec O_1 a b
+color 255 0 0
+drawcircle O_1 C'
+
+color 0 0 0
+
+rotate p' O_1 130 O
+mark_rb p' 
+rotate k O -310 P % oznaka za k
+mark_lt k
+
+

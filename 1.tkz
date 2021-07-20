@@ -1,0 +1,31 @@
+\begin{tikzpicture}[scale=0.75]
+\clip (0,0) rectangle (12.000000,6.000000);
+{\footnotesize
+
+% Drawing circle k
+\draw [line width=0.016cm] (5.400000,3.300000) circle (1.612452);%
+
+% Marking point O by circle
+\draw [line width=0.016cm] (5.400000,3.300000) circle (0.040000);%
+\draw (5.430000,3.330000) node [anchor=north east] { $O$ };%
+
+% Changing color 255 0 0
+\definecolor{r255g0b0}{rgb}{1.000000,0.000000,0.000000}%
+\color{r255g0b0}% 
+
+% Drawing line p
+\draw [line width=0.016cm] (1.500000,4.347362) -- (5.361369,3.310375);%
+\draw [line width=0.016cm] (5.438631,3.289625) -- (10.500000,1.930373);%
+
+% Changing color 0 0 0
+\definecolor{r0g0b0}{rgb}{0.000000,0.000000,0.000000}%
+\color{r0g0b0}% 
+
+% Printing text at point M
+\draw (1.670000,4.830000) node [anchor=north west] { $p$ };%
+
+% Marking point k
+\draw (6.373205,2.014359) node [anchor=north west] { $k$ };%
+\color{black}
+}
+\end{tikzpicture}

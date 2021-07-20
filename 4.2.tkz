@@ -1,0 +1,68 @@
+\begin{tikzpicture}[scale=0.7]
+\clip (0,0) rectangle (14.000000,10.000000);
+{\footnotesize
+
+% Drawing circle k
+\draw [line width=0.016cm] (4.400000,3.900000) circle (2.801785);%
+
+% Marking point O by circle
+\draw [line width=0.016cm] (4.400000,3.900000) circle (0.040000);%
+\draw (4.430000,3.930000) node [anchor=north east] { $O$ };%
+
+% Changing color 0 0 255
+\definecolor{r0g0b255}{rgb}{0.000000,0.000000,1.000000}%
+\color{r0g0b255}% 
+
+% Marking point O_1 by circle
+\draw [line width=0.016cm] (6.748343,3.983149) circle (0.040000);%
+\draw (6.748343,3.983149) node [anchor=north] { $O_1$ };%
+
+% Changing color 255 0 0
+\definecolor{r255g0b0}{rgb}{1.000000,0.000000,0.000000}%
+\color{r255g0b0}% 
+
+% Drawing circle k_1
+\draw [line width=0.016cm] (6.748343,3.983149) circle (1.392709);%
+
+% Changing color 0 0 0
+\definecolor{r0g0b0}{rgb}{0.000000,0.000000,0.000000}%
+\color{r0g0b0}% 
+
+% Changing color 0 0 255
+\definecolor{r0g0b255}{rgb}{0.000000,0.000000,1.000000}%
+\color{r0g0b255}% 
+
+% Marking point O_1' by circle
+\draw [line width=0.016cm] (7.738598,4.018212) circle (0.040000);%
+\draw (7.738598,4.018212) node [anchor=north] { $O_1'$ };%
+
+% Changing color 0 0 0
+\definecolor{r0g0b0}{rgb}{0.000000,0.000000,0.000000}%
+\color{r0g0b0}% 
+
+% Marking point O_2 by circle
+\draw [line width=0.016cm] (9.546439,4.082223) circle (0.040000);%
+\draw (9.546439,4.082223) node [anchor=north] { $O_2$ };%
+
+% Changing color 255 0 0
+\definecolor{r255g0b0}{rgb}{1.000000,0.000000,0.000000}%
+\color{r255g0b0}% 
+
+% Drawing circle k_1'
+\draw [line width=0.016cm] (9.546439,4.082223) circle (3.052149);%
+
+% Changing color 0 0 0
+\definecolor{r0g0b0}{rgb}{0.000000,0.000000,0.000000}%
+\color{r0g0b0}% 
+
+% Marking point k
+\draw (1.695918,3.166557) node [anchor=south east] { $k$ };%
+
+% Marking point k_1
+\draw (8.114659,3.713305) node [anchor=south west] { $k_1$ };%
+
+% Marking point k_1'
+\draw (11.239498,6.621744) node [anchor=south west] { $k_1'$ };%
+\color{black}
+}
+\end{tikzpicture}

@@ -1,0 +1,59 @@
+dim 140 100
+area 10 10 130 90
+
+point P 26 27
+point O 44 47
+circle k O P
+drawcircle k
+cmark_lb O
+
+
+oncircle X O P
+%cmark_rb X
+line l O X
+%drawline l
+
+perp n X l
+%drawline n
+
+perp m O l
+%drawline m
+
+intersec2 X_1 X_2 k m
+%cmark_rb X_1
+%cmark_lt X_2
+
+perp s X_1 m
+%drawline s
+
+intersec O_1 s n
+cmark_b O_1
+
+color 255 0 0
+circle k_1 O_1 X
+drawcircle k_1
+color 0 0 0
+
+oncircle K O_1 X
+%cmark_lb K
+sim K' k K
+%cmark_lb K'
+
+
+sim O_1' k O_1
+color 0 0 255
+cmark_lb O_1'
+
+color 0 0 0
+
+
+rotate k O -310 P % oznaka za k
+mark_rb k
+rotate k_1 O_1 -150 X
+mark_rt k_1
+
+
+
+
+
+

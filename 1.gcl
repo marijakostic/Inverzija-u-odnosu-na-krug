@@ -1,0 +1,22 @@
+dim 120 60
+area 15 10 105 85
+point O 54 33 % centar kruga
+point X 52 49 % pomocna tacka sa kruga
+
+circle k O X
+drawcircle k
+cmark_lb O
+
+oncircle A O X % proizvoljna tacka na krugu 
+color 255 0 0
+line p A O
+drawline p
+
+color 0 0 0
+point M 17 48 % oznaka za pravu
+printat_rb M {p}
+
+rotate k O -150 X % oznaka za k
+mark_rb k
+
+

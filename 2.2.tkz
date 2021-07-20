@@ -1,0 +1,45 @@
+\begin{tikzpicture}[scale=0.7]
+\clip (0,0) rectangle (14.000000,10.000000);
+{\footnotesize
+
+% Drawing circle k
+\draw [line width=0.016cm] (4.600000,4.200000) circle (2.961419);%
+
+% Marking point O by circle
+\draw [line width=0.016cm] (4.600000,4.200000) circle (0.040000);%
+\draw (4.630000,4.230000) node [anchor=north east] { $O$ };%
+
+% Changing color 255 0 0
+\definecolor{r255g0b0}{rgb}{1.000000,0.000000,0.000000}%
+\color{r255g0b0}% 
+
+% Drawing line p
+\draw [line width=0.016cm] (9.840000,1.000000) -- (3.003636,9.000000);%
+
+% Changing color 0 0 0
+\definecolor{r0g0b0}{rgb}{0.000000,0.000000,0.000000}%
+\color{r0g0b0}% 
+
+% Printing text at point M
+\draw (3.470000,8.730000) node [anchor=north west] { $p$ };%
+
+% Changing color 255 0 0
+\definecolor{r255g0b0}{rgb}{1.000000,0.000000,0.000000}%
+\color{r255g0b0}% 
+
+% Drawing circle O_1 A'
+\draw [line width=0.016cm] (4.300683,6.744198) -- (4.298934,6.740773) arc (153:219:2.302169 and 2.302169) -- (4.574279,4.230634);%
+\draw [line width=0.016cm] (4.626249,4.169818) -- (4.639336,4.155158) arc (222:360:2.302169 and 2.302169) --(8.652351,5.695610) arc (0:152:2.302169 and 2.302169) -- (4.300683,6.744199);%
+
+% Changing color 0 0 0
+\definecolor{r0g0b0}{rgb}{0.000000,0.000000,0.000000}%
+\color{r0g0b0}% 
+
+% Marking point p'
+\draw (8.620880,5.316252) node [anchor=north west] { $p'$ };%
+
+% Marking point k
+\draw (1.992798,5.604457) node [anchor=south east] { $k$ };%
+\color{black}
+}
+\end{tikzpicture}

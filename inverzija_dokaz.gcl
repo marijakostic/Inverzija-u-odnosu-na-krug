@@ -1,0 +1,49 @@
+dim 140 100
+area 15 10 110 90
+point O 50 48 % centar kruga
+point X 47 70 % pomocna tacka sa kruga
+
+circle k O X
+drawcircle k
+cmark_lb O
+
+% preslkavamo ovu tacku
+point P 91 48
+cmark_b P
+
+line p O P % prava p=OP
+drawline p
+
+midpoint M O P
+circle k_1 M O
+intersec2 T_1 T_2 k k_1
+cmark_b T_1
+cmark_t T_2
+
+
+line t_1 T_1 P
+line t_2 T_2 P
+drawline t_1
+drawline t_2
+
+drawsegment T_1 T_2
+drawsegment O T_1
+drawsegment O T_2
+
+line t T_1 T_2
+intersec P' t p
+cmark_rb P'
+
+rotate k O 20 X
+mark_t k
+
+towards t_1 P T_1 1.7
+mark_b t_1
+
+towards t_2 P T_2 1.9
+mark_rt t_2
+
+towards r O T_1 0.5
+mark_lb r
+towards r O T_2 0.5
+mark_lt r

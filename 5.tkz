@@ -1,0 +1,46 @@
+\begin{tikzpicture}[scale=0.75]
+\clip (0,0) rectangle (14.000000,10.000000);
+{\footnotesize
+
+% Drawing circle k
+\draw [line width=0.016cm] (4.400000,4.700000) circle (2.690725);%
+
+% Marking point O by circle
+\draw [line width=0.016cm] (4.400000,4.700000) circle (0.040000);%
+\draw (4.430000,4.730000) node [anchor=north east] { $O$ };%
+
+% Marking point O_1 by circle
+\draw [line width=0.016cm] (8.115576,5.521278) circle (0.040000);%
+\draw (8.115576,5.521278) node [anchor=north] { $O_1$ };%
+
+% Changing color 255 0 0
+\definecolor{r255g0b0}{rgb}{1.000000,0.000000,0.000000}%
+\color{r255g0b0}% 
+
+% Drawing circle k_1
+\draw [line width=0.016cm] (8.115576,5.521278) circle (2.690725);%
+
+% Changing color 0 0 0
+\definecolor{r0g0b0}{rgb}{0.000000,0.000000,0.000000}%
+\color{r0g0b0}% 
+
+% Changing color 0 0 255
+\definecolor{r0g0b255}{rgb}{0.000000,0.000000,1.000000}%
+\color{r0g0b255}% 
+
+% Marking point O_1' by circle
+\draw [line width=0.016cm] (6.257788,5.110639) circle (0.040000);%
+\draw (6.287788,5.140639) node [anchor=north east] { $O_1'$ };%
+
+% Changing color 0 0 0
+\definecolor{r0g0b0}{rgb}{0.000000,0.000000,0.000000}%
+\color{r0g0b0}% 
+
+% Marking point k
+\draw (4.775072,2.035545) node [anchor=north west] { $k$ };%
+
+% Marking point k_1
+\draw (8.234629,8.209368) node [anchor=south west] { $k_1$ };%
+\color{black}
+}
+\end{tikzpicture}
